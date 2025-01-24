@@ -2,7 +2,7 @@ Descrição dos Casos de Teste
 
 ============================================================
 ORGANIZATION.robot 
-============================================================
+============================================================ 
 
 Scenario 01: Attempt to create an organization without filling mandatory fields
 Documentação: Test to verify the "Avançar" button is disabled when mandatory fields are not filled.
