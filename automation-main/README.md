@@ -60,6 +60,3 @@ robot -d ./logs path/to/your/testsuite.robot
 
 ```Verifies if the specified element is enabled.```
 
-### Execution of the scenarios
-![image](https://github.com/user-attachments/assets/f9dcfea9-4054-4cca-a495-eb93da5a0726)
-
