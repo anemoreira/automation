@@ -1,0 +1,198 @@
+{"level":30,"time":"2025-01-22T00:19:36.748Z","pid":21040,"hostname":"Adejane","msg":"Listening on 59041"}
+(node:21040) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:10982:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:11598:59)
+    at PlaywrightServer.setTimeout (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:11837:57)
+    at Object.onReceiveHalfClose (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-22T00:19:36.973Z","pid":21040,"hostname":"Adejane","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-01-22T00:19:37.736Z","pid":21040,"hostname":"Adejane","msg":"Adding browser to stack: chromium, version: 130.0.6723.31"}
+{"level":30,"time":"2025-01-22T00:19:37.738Z","pid":21040,"hostname":"Adejane","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-01-22T00:19:37.738Z","pid":21040,"hostname":"Adejane","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-01-22T00:19:37.754Z","pid":21040,"hostname":"Adejane","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-01-22T00:19:37.755Z","pid":21040,"hostname":"Adejane","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-22T00:19:37.788Z","pid":21040,"hostname":"Adejane","msg":"Changed active context"}
+{"level":30,"time":"2025-01-22T00:19:38.063Z","pid":21040,"hostname":"Adejane","msg":"Video path: undefined"}
+{"level":30,"time":"2025-01-22T00:19:38.063Z","pid":21040,"hostname":"Adejane","msg":"Changed active page"}
+{"level":30,"time":"2025-01-22T00:19:41.274Z","pid":21040,"hostname":"Adejane","msg":"End of node method newPage"}
+{"level":30,"time":"2025-01-22T00:19:41.292Z","pid":21040,"hostname":"Adejane","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-01-22T00:19:41.293Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@name,'username')] in page."}
+{"level":30,"time":"2025-01-22T00:19:43.187Z","pid":21040,"hostname":"Adejane","msg":"End of node method fillText"}
+{"level":30,"time":"2025-01-22T00:19:43.199Z","pid":21040,"hostname":"Adejane","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-01-22T00:19:43.200Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@type,'password')] in page."}
+{"level":30,"time":"2025-01-22T00:19:43.256Z","pid":21040,"hostname":"Adejane","msg":"End of node method fillText"}
+{"level":30,"time":"2025-01-22T00:19:43.268Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:19:43.269Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'login-button')] in page."}
+{"level":30,"time":"2025-01-22T00:19:43.284Z","pid":21040,"hostname":"Adejane","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:19:43.300Z","pid":21040,"hostname":"Adejane","msg":"Start of node method click"}
+{"level":30,"time":"2025-01-22T00:19:43.301Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'login-button')] in page."}
+{"level":30,"time":"2025-01-22T00:19:43.727Z","pid":21040,"hostname":"Adejane","msg":"End of node method click"}
+{"level":30,"time":"2025-01-22T00:19:43.735Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForNavigation"}
+{"level":30,"time":"2025-01-22T00:20:43.746Z","pid":21040,"hostname":"Adejane","msg":"Error of node method waitForNavigation"}
+================= Original suppressed error =================
+page.waitForNavigation: Timeout 60000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "https://dash.weni.ai//orgs" until "load"
+  navigated to "https://dash.weni.ai/#state=74368758-e8f5-4460-8934-c2f4e2d39679&session_state=f6eaeb5a-20a6-493e-93de-48cdbd7fd298&code=322c03b4-efb0-4622-9bd5-d7e5c3f870b5.f6eaeb5a-20a6-493e-93de-48cdbd7fd298.8201343a-eae9-4294-b79c-8c2cea71fc00"
+  navigated to "https://dash.weni.ai/"
+  navigated to "https://dash.weni.ai/orgs"
+============================================================
+    at waitForNavigation (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:9717:14)
+    at PlaywrightServer.waitForNavigation (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js:11639:34)
+    at Object.onReceiveHalfClose (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-01-22T00:20:43.818Z","pid":21040,"hostname":"Adejane","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:43.819Z","pid":21040,"hostname":"Adejane","Take screenshot with options: ":{"path":"C:\\Users\\adeja\\Desktop\\aut\\robot\\logs\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2025-01-22T00:20:44.007Z","pid":21040,"hostname":"Adejane","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:44.034Z","pid":21040,"hostname":"Adejane","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:44.041Z","pid":21040,"hostname":"Adejane","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:44.047Z","pid":21040,"hostname":"Adejane","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:44.052Z","pid":21040,"hostname":"Adejane","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:44.058Z","pid":21040,"hostname":"Adejane","msg":"Changed active context"}
+{"level":30,"time":"2025-01-22T00:20:44.059Z","pid":21040,"hostname":"Adejane","msg":"Changing current active page: page=4c536546-b0db-429e-b408-c07edc454140"}
+{"level":30,"time":"2025-01-22T00:20:44.059Z","pid":21040,"hostname":"Adejane","msg":"Changed active page"}
+{"level":30,"time":"2025-01-22T00:20:44.069Z","pid":21040,"hostname":"Adejane","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:44.075Z","pid":21040,"hostname":"Adejane","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:44.081Z","pid":21040,"hostname":"Adejane","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-01-22T00:20:44.082Z","pid":21040,"hostname":"Adejane","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-01-22T00:20:44.089Z","pid":21040,"hostname":"Adejane","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-01-22T00:20:44.091Z","pid":21040,"hostname":"Adejane","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-01-22T00:20:44.097Z","pid":21040,"hostname":"Adejane","msg":"Changing current active page: page=4c536546-b0db-429e-b408-c07edc454140"}
+{"level":30,"time":"2025-01-22T00:20:44.097Z","pid":21040,"hostname":"Adejane","msg":"Changed active page"}
+{"level":30,"time":"2025-01-22T00:20:44.108Z","pid":21040,"hostname":"Adejane","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:44.112Z","pid":21040,"hostname":"Adejane","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:44.117Z","pid":21040,"hostname":"Adejane","msg":"Changed active context"}
+{"level":30,"time":"2025-01-22T00:20:44.117Z","pid":21040,"hostname":"Adejane","msg":"Changing current active page: page=4c536546-b0db-429e-b408-c07edc454140"}
+{"level":30,"time":"2025-01-22T00:20:44.117Z","pid":21040,"hostname":"Adejane","msg":"Changed active page"}
+{"level":30,"time":"2025-01-22T00:20:44.122Z","pid":21040,"hostname":"Adejane","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-01-22T00:20:44.143Z","pid":21040,"hostname":"Adejane","msg":"Removed page=65eea74e-6f20-487a-ba56-29c05a8b9243 from context=59ad85f7-8e1c-4b30-9302-3a58a4dd63a2 page stack"}
+{"level":30,"time":"2025-01-22T00:20:44.148Z","pid":21040,"hostname":"Adejane","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-01-22T00:20:44.160Z","pid":21040,"hostname":"Adejane","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:44.160Z","pid":21040,"hostname":"Adejane","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:44.173Z","pid":21040,"hostname":"Adejane","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-01-22T00:20:44.174Z","pid":21040,"hostname":"Adejane","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-01-22T00:20:44.185Z","pid":21040,"hostname":"Adejane","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-01-22T00:20:44.185Z","pid":21040,"hostname":"Adejane","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-22T00:20:44.198Z","pid":21040,"hostname":"Adejane","msg":"Changed active context"}
+{"level":30,"time":"2025-01-22T00:20:44.446Z","pid":21040,"hostname":"Adejane","msg":"Video path: undefined"}
+{"level":30,"time":"2025-01-22T00:20:44.446Z","pid":21040,"hostname":"Adejane","msg":"Changed active page"}
+{"level":30,"time":"2025-01-22T00:20:47.538Z","pid":21040,"hostname":"Adejane","msg":"End of node method newPage"}
+{"level":30,"time":"2025-01-22T00:20:47.554Z","pid":21040,"hostname":"Adejane","msg":"Start of node method goTo"}
+{"level":30,"time":"2025-01-22T00:20:48.318Z","pid":21040,"hostname":"Adejane","msg":"End of node method goTo"}
+{"level":30,"time":"2025-01-22T00:20:48.327Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:48.327Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@name,'username')] in page."}
+{"level":30,"time":"2025-01-22T00:20:50.153Z","pid":21040,"hostname":"Adejane","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:50.160Z","pid":21040,"hostname":"Adejane","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:50.160Z","pid":21040,"hostname":"Adejane","Take screenshot with options: ":{"path":"C:\\Users\\adeja\\Desktop\\aut\\robot\\logs\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2025-01-22T00:20:50.324Z","pid":21040,"hostname":"Adejane","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:50.333Z","pid":21040,"hostname":"Adejane","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:50.333Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@name,'username')] in page."}
+{"level":30,"time":"2025-01-22T00:20:50.358Z","pid":21040,"hostname":"Adejane","msg":"End of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:50.365Z","pid":21040,"hostname":"Adejane","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:50.365Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@type,'password')] in page."}
+{"level":30,"time":"2025-01-22T00:20:50.387Z","pid":21040,"hostname":"Adejane","msg":"End of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:50.395Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:50.395Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'login-button')] in page."}
+{"level":30,"time":"2025-01-22T00:20:50.404Z","pid":21040,"hostname":"Adejane","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:50.411Z","pid":21040,"hostname":"Adejane","msg":"Start of node method click"}
+{"level":30,"time":"2025-01-22T00:20:50.411Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'login-button')] in page."}
+{"level":30,"time":"2025-01-22T00:20:51.148Z","pid":21040,"hostname":"Adejane","msg":"End of node method click"}
+{"level":30,"time":"2025-01-22T00:20:51.159Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:51.159Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with text=Invalid username or password. in page."}
+{"level":30,"time":"2025-01-22T00:20:51.384Z","pid":21040,"hostname":"Adejane","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:51.391Z","pid":21040,"hostname":"Adejane","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:51.391Z","pid":21040,"hostname":"Adejane","Take screenshot with options: ":{"path":"C:\\Users\\adeja\\Desktop\\aut\\robot\\logs\\browser\\screenshot\\robotframework-browser-screenshot-2.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2025-01-22T00:20:51.599Z","pid":21040,"hostname":"Adejane","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:51.606Z","pid":21040,"hostname":"Adejane","msg":"Start of node method goTo"}
+{"level":30,"time":"2025-01-22T00:20:52.148Z","pid":21040,"hostname":"Adejane","msg":"End of node method goTo"}
+{"level":30,"time":"2025-01-22T00:20:52.164Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:52.164Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@name,'username')] in page."}
+{"level":30,"time":"2025-01-22T00:20:52.653Z","pid":21040,"hostname":"Adejane","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:52.659Z","pid":21040,"hostname":"Adejane","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:52.660Z","pid":21040,"hostname":"Adejane","Take screenshot with options: ":{"path":"C:\\Users\\adeja\\Desktop\\aut\\robot\\logs\\browser\\screenshot\\robotframework-browser-screenshot-3.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2025-01-22T00:20:52.920Z","pid":21040,"hostname":"Adejane","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:52.929Z","pid":21040,"hostname":"Adejane","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:52.929Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@name,'username')] in page."}
+{"level":30,"time":"2025-01-22T00:20:52.950Z","pid":21040,"hostname":"Adejane","msg":"End of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:52.955Z","pid":21040,"hostname":"Adejane","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:52.955Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@type,'password')] in page."}
+{"level":30,"time":"2025-01-22T00:20:52.979Z","pid":21040,"hostname":"Adejane","msg":"End of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:52.986Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:52.986Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'login-button')] in page."}
+{"level":30,"time":"2025-01-22T00:20:52.993Z","pid":21040,"hostname":"Adejane","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:52.998Z","pid":21040,"hostname":"Adejane","msg":"Start of node method click"}
+{"level":30,"time":"2025-01-22T00:20:52.998Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'login-button')] in page."}
+{"level":30,"time":"2025-01-22T00:20:53.510Z","pid":21040,"hostname":"Adejane","msg":"End of node method click"}
+{"level":30,"time":"2025-01-22T00:20:53.519Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:53.519Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with text=Invalid username or password. in page."}
+{"level":30,"time":"2025-01-22T00:20:53.915Z","pid":21040,"hostname":"Adejane","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:53.923Z","pid":21040,"hostname":"Adejane","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:53.923Z","pid":21040,"hostname":"Adejane","Take screenshot with options: ":{"path":"C:\\Users\\adeja\\Desktop\\aut\\robot\\logs\\browser\\screenshot\\robotframework-browser-screenshot-4.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2025-01-22T00:20:54.215Z","pid":21040,"hostname":"Adejane","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:54.222Z","pid":21040,"hostname":"Adejane","msg":"Start of node method goTo"}
+{"level":30,"time":"2025-01-22T00:20:56.087Z","pid":21040,"hostname":"Adejane","msg":"End of node method goTo"}
+{"level":30,"time":"2025-01-22T00:20:56.097Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:56.097Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@name,'username')] in page."}
+{"level":30,"time":"2025-01-22T00:20:56.618Z","pid":21040,"hostname":"Adejane","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:56.626Z","pid":21040,"hostname":"Adejane","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:56.626Z","pid":21040,"hostname":"Adejane","Take screenshot with options: ":{"path":"C:\\Users\\adeja\\Desktop\\aut\\robot\\logs\\browser\\screenshot\\robotframework-browser-screenshot-5.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2025-01-22T00:20:57.116Z","pid":21040,"hostname":"Adejane","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:57.134Z","pid":21040,"hostname":"Adejane","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:57.134Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@name,'username')] in page."}
+{"level":30,"time":"2025-01-22T00:20:57.174Z","pid":21040,"hostname":"Adejane","msg":"End of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:57.180Z","pid":21040,"hostname":"Adejane","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:57.180Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//input[contains(@type,'password')] in page."}
+{"level":30,"time":"2025-01-22T00:20:57.313Z","pid":21040,"hostname":"Adejane","msg":"End of node method fillText"}
+{"level":30,"time":"2025-01-22T00:20:57.321Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:57.321Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'login-button')] in page."}
+{"level":30,"time":"2025-01-22T00:20:57.446Z","pid":21040,"hostname":"Adejane","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:57.459Z","pid":21040,"hostname":"Adejane","msg":"Start of node method click"}
+{"level":30,"time":"2025-01-22T00:20:57.459Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(@class,'login-button')] in page."}
+{"level":30,"time":"2025-01-22T00:20:58.030Z","pid":21040,"hostname":"Adejane","msg":"End of node method click"}
+{"level":30,"time":"2025-01-22T00:20:58.035Z","pid":21040,"hostname":"Adejane","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:58.036Z","pid":21040,"hostname":"Adejane","msg":"Strict mode is enabled, find Locator with text=Invalid username or password. in page."}
+{"level":30,"time":"2025-01-22T00:20:58.206Z","pid":21040,"hostname":"Adejane","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-01-22T00:20:58.212Z","pid":21040,"hostname":"Adejane","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:58.212Z","pid":21040,"hostname":"Adejane","Take screenshot with options: ":{"path":"C:\\Users\\adeja\\Desktop\\aut\\robot\\logs\\browser\\screenshot\\robotframework-browser-screenshot-6.png","fileType":"png","fullPage":false,"timeout":60000,"omitBackground":false}}
+{"level":30,"time":"2025-01-22T00:20:58.444Z","pid":21040,"hostname":"Adejane","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-01-22T00:20:58.448Z","pid":21040,"hostname":"Adejane","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:58.451Z","pid":21040,"hostname":"Adejane","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:58.456Z","pid":21040,"hostname":"Adejane","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:58.459Z","pid":21040,"hostname":"Adejane","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:58.464Z","pid":21040,"hostname":"Adejane","msg":"Changed active context"}
+{"level":30,"time":"2025-01-22T00:20:58.464Z","pid":21040,"hostname":"Adejane","msg":"Changing current active page: page=977ef47a-e559-4dab-9a52-40dc71a4094c"}
+{"level":30,"time":"2025-01-22T00:20:58.464Z","pid":21040,"hostname":"Adejane","msg":"Changed active page"}
+{"level":30,"time":"2025-01-22T00:20:58.468Z","pid":21040,"hostname":"Adejane","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:58.470Z","pid":21040,"hostname":"Adejane","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:58.473Z","pid":21040,"hostname":"Adejane","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-01-22T00:20:58.474Z","pid":21040,"hostname":"Adejane","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-01-22T00:20:58.477Z","pid":21040,"hostname":"Adejane","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-01-22T00:20:58.477Z","pid":21040,"hostname":"Adejane","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-01-22T00:20:58.481Z","pid":21040,"hostname":"Adejane","msg":"Changing current active page: page=977ef47a-e559-4dab-9a52-40dc71a4094c"}
+{"level":30,"time":"2025-01-22T00:20:58.481Z","pid":21040,"hostname":"Adejane","msg":"Changed active page"}
+{"level":30,"time":"2025-01-22T00:20:58.486Z","pid":21040,"hostname":"Adejane","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:58.488Z","pid":21040,"hostname":"Adejane","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:58.492Z","pid":21040,"hostname":"Adejane","msg":"Changed active context"}
+{"level":30,"time":"2025-01-22T00:20:58.492Z","pid":21040,"hostname":"Adejane","msg":"Changing current active page: page=977ef47a-e559-4dab-9a52-40dc71a4094c"}
+{"level":30,"time":"2025-01-22T00:20:58.492Z","pid":21040,"hostname":"Adejane","msg":"Changed active page"}
+{"level":30,"time":"2025-01-22T00:20:58.496Z","pid":21040,"hostname":"Adejane","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-01-22T00:20:58.502Z","pid":21040,"hostname":"Adejane","msg":"Removed page=144d9ea9-64b5-410f-a99e-a8454880abdf from context=6f81a621-0727-4823-95e1-27c4210d83d1 page stack"}
+{"level":30,"time":"2025-01-22T00:20:58.504Z","pid":21040,"hostname":"Adejane","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-01-22T00:20:58.518Z","pid":21040,"hostname":"Adejane","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:58.519Z","pid":21040,"hostname":"Adejane","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-22T00:20:58.679Z","pid":21040,"hostname":"Adejane","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-22T00:20:58.801Z","pid":21040,"hostname":"Adejane","msg":"End of node method closeAllBrowsers"}

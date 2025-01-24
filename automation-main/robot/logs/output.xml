@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.0 on win32)" generated="2025-01-21T21:19:33.593622" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\adeja\Desktop\aut\robot\tests\Login.robot">
+<test id="s1-t1" name="Scenario 01: Should log in with valid credentials" line="14">
+<kw name="Start session" owner="BaseResource" type="SETUP">
+<kw name="Set Browser Timeout" owner="Browser">
+<msg time="2025-01-21T21:19:34.454074" level="INFO">Starting Browser process C:\Users\adeja\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using port 59041</msg>
+<msg time="2025-01-21T21:19:34.454074" level="INFO">Node startup parameters: ['node', 'C:\\Users\\adeja\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\Browser\\wrapper\\index.js', '59041']</msg>
+<arg>60s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-01-21T21:19:34.291944" elapsed="2.675149"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-21T21:19:36.969611" level="INFO">{"browser": "chromium", "headless": true, "args": ["--lang=pt-BR"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\adeja\\Desktop\\aut\\robot\\logs\\browser\\traces\\3865582a-ea89-488c-9b50-9d4551e3c1c1"}</msg>
+<msg time="2025-01-21T21:19:37.744378" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--lang=pt-BR"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\adeja\\Desktop\\aut\\robot\\logs\\browser\\traces\\3865582a-ea89-488c-9b50-9d4551e3c1c1"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>args=["--lang=pt-BR"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-21T21:19:36.967093" elapsed="0.778285"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-01-21T21:19:41.278696" level="INFO">Successfully initialized new page object and opened url: https://dash.weni.ai/</msg>
+<msg time="2025-01-21T21:19:41.278696" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-01-21T21:19:37.745378" elapsed="3.533318"/>
+</kw>
+<doc>Start a new browser session</doc>
+<status status="PASS" start="2025-01-21T21:19:34.289889" elapsed="6.990184"/>
+</kw>
+<kw name="Submit login form" owner="Login">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-01-21T21:19:41.285092" level="INFO">Fills the text 'adejanee.silva@gmail.com' in the given field.</msg>
+<arg>xpath=//input[contains(@name,'username')]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:19:41.284112" elapsed="1.907507"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-01-21T21:19:43.194617" level="INFO">Fills the text '8EAqYwf*' in the given field.</msg>
+<arg>xpath=//input[contains(@type,'password')]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:19:43.192619" elapsed="0.067574"/>
+</kw>
+<kw name="Wait and Click" owner="BaseResource">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-21T21:19:43.286594" level="INFO">Waited for Element with selector xpath=//button[contains(@class,'login-button')] at state visible</msg>
+<arg>${element_selector}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-21T21:19:43.262228" elapsed="0.025499"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-01-21T21:19:43.290317" level="INFO">Clicks the element 'xpath=//button[contains(@class,'login-button')]'.</msg>
+<arg>selector=${element_selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:19:43.288409" elapsed="0.440863"/>
+</kw>
+<arg>xpath=//button[contains(@class,'login-button')]</arg>
+<doc>Waits for an element to be visible and then clicks it</doc>
+<status status="PASS" start="2025-01-21T21:19:43.261227" elapsed="0.469044"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Submit the login form with the given credentials</doc>
+<status status="PASS" start="2025-01-21T21:19:41.282091" elapsed="2.448180"/>
+</kw>
+<kw name="Verify Successful Login" owner="Login">
+<kw name="Wait For Navigation" owner="Browser">
+<msg time="2025-01-21T21:20:44.011798" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-21T21:20:44.011798" level="INFO">See also file:///C:/Users/adeja/Desktop/aut/robot/logs/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-21T21:20:44.012753" level="FAIL">TimeoutError: page.waitForNavigation: Timeout 60000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "https://dash.weni.ai//orgs" until "load"
+  navigated to "https://dash.weni.ai/#state=74368758-e8f5-4460-8934-c2f4e2d39679&amp;session_state=f6eaeb5a-20a6-493e-93de-48cdbd7fd298&amp;code=322c03b4-efb0-4622-9bd5-d7e5c3f870b5.f6eaeb5a-20a6-493e-93de-48cdbd7fd298.8201343a-eae9-4294-b79c-8c2cea71fc00"
+  navigated to "https://dash.weni.ai/"
+  navigated to "https://dash.weni.ai/orgs"
+============================================================</msg>
+<arg>${expected_url}</arg>
+<tag>HTTP</tag>
+<tag>Wait</tag>
+<doc>Waits until page has navigated to given ``url``.</doc>
+<status status="FAIL" start="2025-01-21T21:19:43.731607" elapsed="60.296873">TimeoutError: page.waitForNavigation: Timeout 60000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "https://dash.weni.ai//orgs" until "load"
+  navigated to "https://dash.weni.ai/#state=74368758-e8f5-4460-8934-c2f4e2d39679&amp;session_state=f6eaeb5a-20a6-493e-93de-48cdbd7fd298&amp;code=322c03b4-efb0-4622-9bd5-d7e5c3f870b5.f6eaeb5a-20a6-493e-93de-48cdbd7fd298.8201343a-eae9-4294-b79c-8c2cea71fc00"
+  navigated to "https://dash.weni.ai/"
+  navigated to "https://dash.weni.ai/orgs"
+============================================================</status>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>xpath=//h1[contains(.,'Suas organizações')]</arg>
+<arg>visible</arg>
+<arg>timeout=30s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2025-01-21T21:20:44.029534" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>xpath=//button[contains(.,'Criar organização')]</arg>
+<arg>visible</arg>
+<arg>timeout=30s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2025-01-21T21:20:44.029534" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2025-01-21T21:20:44.029534" elapsed="0.001139"/>
+</kw>
+<arg>${BASE_URL}/orgs</arg>
+<doc>Verify if the login was successful</doc>
+<status status="FAIL" start="2025-01-21T21:19:43.730271" elapsed="60.300402">TimeoutError: page.waitForNavigation: Timeout 60000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "https://dash.weni.ai//orgs" until "load"
+  navigated to "https://dash.weni.ai/#state=74368758-e8f5-4460-8934-c2f4e2d39679&amp;session_state=f6eaeb5a-20a6-493e-93de-48cdbd7fd298&amp;code=322c03b4-efb0-4622-9bd5-d7e5c3f870b5.f6eaeb5a-20a6-493e-93de-48cdbd7fd298.8201343a-eae9-4294-b79c-8c2cea71fc00"
+  navigated to "https://dash.weni.ai/"
+  navigated to "https://dash.weni.ai/orgs"
+============================================================</status>
+</kw>
+<status status="FAIL" start="2025-01-21T21:19:34.288304" elapsed="69.742889">TimeoutError: page.waitForNavigation: Timeout 60000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "https://dash.weni.ai//orgs" until "load"
+  navigated to "https://dash.weni.ai/#state=74368758-e8f5-4460-8934-c2f4e2d39679&amp;session_state=f6eaeb5a-20a6-493e-93de-48cdbd7fd298&amp;code=322c03b4-efb0-4622-9bd5-d7e5c3f870b5.f6eaeb5a-20a6-493e-93de-48cdbd7fd298.8201343a-eae9-4294-b79c-8c2cea71fc00"
+  navigated to "https://dash.weni.ai/"
+  navigated to "https://dash.weni.ai/orgs"
+============================================================</status>
+</test>
+<test id="s1-t2" name="Scenario 02: Should not log in with invalid credentials" line="18">
+<kw name="Start session" owner="BaseResource" type="SETUP">
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>60s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-01-21T21:20:44.164847" elapsed="0.002027"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-21T21:20:44.169538" level="INFO">Switching browser to browser=7c5460ae-77b7-4614-b8f6-dc3eae9446d4</msg>
+<msg time="2025-01-21T21:20:44.175771" level="INFO">Successfully changed active browser: browser=7c5460ae-77b7-4614-b8f6-dc3eae9446d4</msg>
+<msg time="2025-01-21T21:20:44.176795" level="INFO">Reusing existing browser with id: browser=7c5460ae-77b7-4614-b8f6-dc3eae9446d4</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>args=["--lang=pt-BR"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-21T21:20:44.167876" elapsed="0.008919"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-01-21T21:20:47.541467" level="INFO">Successfully initialized new page object and opened url: https://dash.weni.ai/</msg>
+<msg time="2025-01-21T21:20:47.541467" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-01-21T21:20:44.176795" elapsed="3.365671"/>
+</kw>
+<doc>Start a new browser session</doc>
+<status status="PASS" start="2025-01-21T21:20:44.163742" elapsed="3.378724"/>
+</kw>
+<kw name="Login with verify message" owner="Login">
+<kw name="Go to login page" owner="Login">
+<kw name="Go To" owner="Browser">
+<msg time="2025-01-21T21:20:48.321226" level="INFO">Successfully opened URL https://dash.weni.ai/</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-01-21T21:20:47.549000" elapsed="0.772226"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-21T21:20:50.155394" level="INFO">Waited for Element with selector xpath=//input[contains(@name,'username')] at state visible</msg>
+<arg>xpath=//input[contains(@name,'username')]</arg>
+<arg>visible</arg>
+<arg>timeout=30s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-21T21:20:48.322307" elapsed="1.834083"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-21T21:20:50.326956" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-21T21:20:50.156390" elapsed="0.171693"/>
+</kw>
+<doc>Go to the login page</doc>
+<status status="PASS" start="2025-01-21T21:20:47.548072" elapsed="2.780011"/>
+</kw>
+<kw name="Submit login form" owner="Login">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-01-21T21:20:50.331005" level="INFO">Fills the text '' in the given field.</msg>
+<arg>xpath=//input[contains(@name,'username')]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:20:50.330007" elapsed="0.030614"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-01-21T21:20:50.362651" level="INFO">Fills the text '' in the given field.</msg>
+<arg>xpath=//input[contains(@type,'password')]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:20:50.361634" elapsed="0.027814"/>
+</kw>
+<kw name="Wait and Click" owner="BaseResource">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-21T21:20:50.406622" level="INFO">Waited for Element with selector xpath=//button[contains(@class,'login-button')] at state visible</msg>
+<arg>${element_selector}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-21T21:20:50.391438" elapsed="0.015184"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-01-21T21:20:50.408309" level="INFO">Clicks the element 'xpath=//button[contains(@class,'login-button')]'.</msg>
+<arg>selector=${element_selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:20:50.406622" elapsed="0.745354"/>
+</kw>
+<arg>xpath=//button[contains(@class,'login-button')]</arg>
+<doc>Waits for an element to be visible and then clicks it</doc>
+<status status="PASS" start="2025-01-21T21:20:50.390478" elapsed="0.761498"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<doc>Submit the login form with the given credentials</doc>
+<status status="PASS" start="2025-01-21T21:20:50.328083" elapsed="0.824891"/>
+</kw>
+<kw name="Show message" owner="BaseResource">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-21T21:20:51.386019" level="INFO">Waited for Element with selector text=Invalid username or password. at state visible</msg>
+<arg>text=${message}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-21T21:20:51.154978" elapsed="0.232080"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-21T21:20:51.602095" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-21T21:20:51.387058" elapsed="0.215037"/>
+</kw>
+<arg>${output_message}</arg>
+<status status="PASS" start="2025-01-21T21:20:51.152974" elapsed="0.449121"/>
+</kw>
+<arg>username=${EMPTY}</arg>
+<arg>password=${EMPTY}</arg>
+<arg>output_message=${EXPECTED_MESSAGE}</arg>
+<doc>This keyword should log in with invalid credentials</doc>
+<status status="PASS" start="2025-01-21T21:20:47.543468" elapsed="4.059627"/>
+</kw>
+<kw name="Login with verify message" owner="Login">
+<kw name="Go to login page" owner="Login">
+<kw name="Go To" owner="Browser">
+<msg time="2025-01-21T21:20:52.151914" level="INFO">Successfully opened URL https://dash.weni.ai/</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-01-21T21:20:51.604092" elapsed="0.548816"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-21T21:20:52.654774" level="INFO">Waited for Element with selector xpath=//input[contains(@name,'username')] at state visible</msg>
+<arg>xpath=//input[contains(@name,'username')]</arg>
+<arg>visible</arg>
+<arg>timeout=30s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-21T21:20:52.154143" elapsed="0.500631"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-21T21:20:52.923442" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-21T21:20:52.656120" elapsed="0.267322"/>
+</kw>
+<doc>Go to the login page</doc>
+<status status="PASS" start="2025-01-21T21:20:51.604092" elapsed="1.319350"/>
+</kw>
+<kw name="Submit login form" owner="Login">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-01-21T21:20:52.925431" level="INFO">Fills the text 'adejanee.silva@gmail.com' in the given field.</msg>
+<arg>xpath=//input[contains(@name,'username')]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:20:52.924431" elapsed="0.027819"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-01-21T21:20:52.953823" level="INFO">Fills the text 'senha-invalida' in the given field.</msg>
+<arg>xpath=//input[contains(@type,'password')]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:20:52.953276" elapsed="0.027687"/>
+</kw>
+<kw name="Wait and Click" owner="BaseResource">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-21T21:20:52.994549" level="INFO">Waited for Element with selector xpath=//button[contains(@class,'login-button')] at state visible</msg>
+<arg>${element_selector}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-21T21:20:52.981955" elapsed="0.012594"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-01-21T21:20:52.996587" level="INFO">Clicks the element 'xpath=//button[contains(@class,'login-button')]'.</msg>
+<arg>selector=${element_selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:20:52.995592" elapsed="0.516809"/>
+</kw>
+<arg>xpath=//button[contains(@class,'login-button')]</arg>
+<doc>Waits for an element to be visible and then clicks it</doc>
+<status status="PASS" start="2025-01-21T21:20:52.981955" elapsed="0.531926"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<doc>Submit the login form with the given credentials</doc>
+<status status="PASS" start="2025-01-21T21:20:52.923442" elapsed="0.590439"/>
+</kw>
+<kw name="Show message" owner="BaseResource">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-21T21:20:53.916523" level="INFO">Waited for Element with selector text=Invalid username or password. at state visible</msg>
+<arg>text=${message}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-21T21:20:53.515082" elapsed="0.401441"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-21T21:20:54.216641" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-4.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-4.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-21T21:20:53.918115" elapsed="0.300085"/>
+</kw>
+<arg>${output_message}</arg>
+<status status="PASS" start="2025-01-21T21:20:53.513881" elapsed="0.704319"/>
+</kw>
+<arg>username=${EMAIL}</arg>
+<arg>password=senha-invalida</arg>
+<arg>output_message=${EXPECTED_MESSAGE}</arg>
+<doc>This keyword should log in with invalid credentials</doc>
+<status status="PASS" start="2025-01-21T21:20:51.603095" elapsed="2.615105"/>
+</kw>
+<kw name="Login with verify message" owner="Login">
+<kw name="Go to login page" owner="Login">
+<kw name="Go To" owner="Browser">
+<msg time="2025-01-21T21:20:56.089699" level="INFO">Successfully opened URL https://dash.weni.ai/</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-01-21T21:20:54.220213" elapsed="1.869486"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-21T21:20:56.620192" level="INFO">Waited for Element with selector xpath=//input[contains(@name,'username')] at state visible</msg>
+<arg>xpath=//input[contains(@name,'username')]</arg>
+<arg>visible</arg>
+<arg>timeout=30s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-21T21:20:56.090697" elapsed="0.529495"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-21T21:20:57.120656" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-5.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-5.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-21T21:20:56.620192" elapsed="0.501512"/>
+</kw>
+<doc>Go to the login page</doc>
+<status status="PASS" start="2025-01-21T21:20:54.219248" elapsed="2.903483"/>
+</kw>
+<kw name="Submit login form" owner="Login">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-01-21T21:20:57.126732" level="INFO">Fills the text 'emailquenaoexiste@gmail.com' in the given field.</msg>
+<arg>xpath=//input[contains(@name,'username')]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:20:57.124733" elapsed="0.051568"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-01-21T21:20:57.178300" level="INFO">Fills the text '8EAqYwf*' in the given field.</msg>
+<arg>xpath=//input[contains(@type,'password')]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:20:57.176301" elapsed="0.139401"/>
+</kw>
+<kw name="Wait and Click" owner="BaseResource">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-21T21:20:57.449541" level="INFO">Waited for Element with selector xpath=//button[contains(@class,'login-button')] at state visible</msg>
+<arg>${element_selector}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-21T21:20:57.316707" elapsed="0.132834"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-01-21T21:20:57.452564" level="INFO">Clicks the element 'xpath=//button[contains(@class,'login-button')]'.</msg>
+<arg>selector=${element_selector}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-01-21T21:20:57.450564" elapsed="0.582149"/>
+</kw>
+<arg>xpath=//button[contains(@class,'login-button')]</arg>
+<doc>Waits for an element to be visible and then clicks it</doc>
+<status status="PASS" start="2025-01-21T21:20:57.316707" elapsed="0.716006"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<doc>Submit the login form with the given credentials</doc>
+<status status="PASS" start="2025-01-21T21:20:57.122731" elapsed="0.909982"/>
+</kw>
+<kw name="Show message" owner="BaseResource">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-01-21T21:20:58.207956" level="INFO">Waited for Element with selector text=Invalid username or password. at state visible</msg>
+<arg>text=${message}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-01-21T21:20:58.034059" elapsed="0.173897"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-21T21:20:58.446564" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-6.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-6.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-21T21:20:58.208973" elapsed="0.237591"/>
+</kw>
+<arg>${output_message}</arg>
+<status status="PASS" start="2025-01-21T21:20:58.032713" elapsed="0.413851"/>
+</kw>
+<arg>username=emailquenaoexiste@gmail.com</arg>
+<arg>password=${PASSWORD}</arg>
+<arg>output_message=${EXPECTED_MESSAGE}</arg>
+<doc>This keyword should log in with invalid credentials</doc>
+<status status="PASS" start="2025-01-21T21:20:54.218200" elapsed="4.228364"/>
+</kw>
+<doc>This test case should not log in with invalid credentials</doc>
+<tag>login_invalid_credentials</tag>
+<status status="PASS" start="2025-01-21T21:20:44.154927" elapsed="14.291637"/>
+</test>
+<doc>Application Login Test</doc>
+<status status="FAIL" start="2025-01-21T21:19:33.598254" elapsed="84.912112"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login_invalid_credentials</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

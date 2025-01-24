@@ -1,0 +1,78 @@
+Descrição dos Casos de Teste
+
+============================================================
+ORGANIZATION.robot 
+============================================================
+
+Scenario 01: Attempt to create an organization without filling mandatory fields
+Documentação: Test to verify the "Avançar" button is disabled when mandatory fields are not filled.
+Tags: organization_creation_validation
+Descrição: Este caso de teste verifica se o botão "Avançar" está desabilitado quando os campos obrigatórios não são preenchidos. São testadas várias combinações de campos vazios e preenchidos para garantir que o sistema não permita a criação de uma organização sem os dados necessários.
+
+Scenario 02: Attempt to create a custom agent without filling mandatory fields
+Documentação: Test to verify error messages when mandatory fields are not filled.
+Tags: organization_creation_validation
+Descrição: Este caso de teste verifica se o sistema exibe mensagens de erro apropriadas quando os campos obrigatórios para a criação de um agente personalizado não são preenchidos. São testadas várias combinações de campos vazios e preenchidos para garantir que o sistema informe corretamente os campos que precisam ser preenchidos.
+
+Scenario 03: Attempt to create an organization with fields exceeding character limits
+Documentação: Test to verify the system handles fields exceeding character limits.
+Tags: organization_creation_validation
+Descrição: Este caso de teste verifica se o sistema lida corretamente com campos que excedem os limites de caracteres permitidos. O teste preenche os campos de nome da organização, descrição do projeto e nome do projeto com textos longos para garantir que o sistema não permita a criação de uma organização com dados que excedem os limites de caracteres.
+
+Scenario 04: Validate full flow for organization and agent
+Documentação: Test to validate the full flow for organization and agent creation.
+Tags: organization_creation_validation
+Descrição: Este caso de teste valida o fluxo completo de criação de uma organização e um agente personalizado. O teste preenche todos os campos necessários e verifica se o processo de criação é concluído com sucesso.
+
+Scenario 05: Should not be possible leaving the organization without confirmation
+Documentação: Test to validate the user can't leave the organization without confirmation.
+Tags: organization_creation_validation
+Descrição: Este caso de teste verifica se o sistema impede que o usuário saia da organização sem confirmar a ação. O teste tenta sair da organização sem fornecer a confirmação necessária e verifica se o sistema bloqueia a ação.
+
+Scenario 06: Leaving the organization
+Documentação: Test to validate the user can leave the organization.
+Tags: organization_creation_validation
+Descrição: Este caso de teste valida se o usuário pode sair da organização fornecendo a confirmação necessária. O teste preenche o campo de confirmação com o nome da organização e verifica se o processo de saída é concluído com sucesso.
+
+============================================================
+CreatePersonality.robot
+============================================================
+
+Scenario 01: Should show error message when the name field is empty
+Documentação: Test to verify the "Salvar alterações" button is disabled when mandatory fields are not filled.
+Tags: personality_creation
+Descrição: Este caso de teste verifica se o botão "Salvar alterações" está desabilitado quando o campo de nome está vazio. O teste preenche os outros campos obrigatórios e verifica se o sistema exibe uma mensagem de erro apropriada.
+
+Scenario 02: Should show error message when the functionality field is empty
+Documentação: Test to verify the "Salvar alterações" button is disabled when mandatory fields are not filled.
+Tags: personality_creation
+Descrição: Este caso de teste verifica se o botão "Salvar alterações" está desabilitado quando o campo de funcionalidade está vazio. O teste preenche os outros campos obrigatórios e verifica se o sistema exibe uma mensagem de erro apropriada.
+
+Scenario 03: Should show error message when the goal field is empty
+Documentação: Test to verify the "Salvar alterações" button is disabled when mandatory fields are not filled.
+Tags: personality_creation
+Descrição: Este caso de teste verifica se o botão "Salvar alterações" está desabilitado quando o campo de objetivo está vazio. O teste preenche os outros campos obrigatórios e verifica se o sistema exibe uma mensagem de erro apropriada.
+
+Scenario 04: Should create a personality successfully
+Documentação: Test to verify the "Salvar alterações" button is enabled when all mandatory fields are filled.
+Tags: personality_creation
+Descrição: Este caso de teste verifica se o botão "Salvar alterações" está habilitado quando todos os campos obrigatórios são preenchidos. O teste preenche todos os campos necessários e verifica se o processo de criação é concluído com sucesso.
+
+Scenario 05: Should configure general instructions for the agent successfully
+Documentação: Test to verify the "Salvar alterações" button is enabled when all mandatory fields are filled.
+Tags: personality_creation
+Descrição: Este caso de teste verifica se o botão "Salvar alterações" está habilitado quando todos os campos obrigatórios são preenchidos. O teste preenche todos os campos necessários e verifica se o processo de configuração das instruções gerais para o agente é concluído com sucesso.
+
+============================================================
+Login.robot
+============================================================
+
+Scenario 01: Login with valid credentials
+Documentação: Test to verify the login process with valid credentials.
+Tags: login
+Descrição: Este caso de teste verifica se o sistema permite o login com credenciais válidas. O teste preenche os campos de nome de usuário e senha com dados válidos e verifica se o login é concluído com sucesso.
+
+Scenario 02: Login with invalid credentials
+Documentação: Test to verify the login process with invalid credentials.
+Tags: login
+Descrição: Este caso de teste verifica se o sistema exibe mensagens de erro apropriadas quando as credenciais são inválidas. O teste preenche os campos de nome de usuário e senha com dados inválidos e verifica se o sistema impede o login e exibe uma mensagem de erro.
